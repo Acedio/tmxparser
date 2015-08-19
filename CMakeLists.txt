@@ -33,7 +33,7 @@ if (NOT USE_MINIZ)
     find_package(ZLIB)
 endif (NOT USE_MINIZ)
 
-set(LIB_CFLAGS "-pedantic -Wall -Werror=strict-prototypes -Werror=old-style-definition -Werror=missing-prototypes")
+set(LIB_CFLAGS "-pedantic -Wall")
 
 if (NOT USE_MINIZ)
     list(APPEND ${LIB_CFLAGS} "-Werror")
