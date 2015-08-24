@@ -35,6 +35,10 @@ endif (NOT USE_MINIZ)
 
 set(LIB_CFLAGS "-pedantic -Wall")
 
+if (MSVC)
+  set (LIB_CFLAGS "${LIB_CFLAGS} -wd4514 -wd4710 -wd4820")
+endif (MSVC)
+
 if (NOT USE_MINIZ)
     list(APPEND ${LIB_CFLAGS} "-Werror")
 endif (NOT USE_MINIZ)
